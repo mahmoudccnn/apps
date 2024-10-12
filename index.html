@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Event Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1867b1;
+        }
+        form {
+            text-align: center;
+            background: aqua;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(26, 158, 219, 0.1);
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #21a4d8;
+            padding: 10px 20px;
+        }
+        .navbar img {
+            height: 400px;
+         
+         border-radius: 50%;   width: 300px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+        }
+        .navbar ul li a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 4px 0;
+        }
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+            }
+            .navbar ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+        .navbar{
+            text-align: center;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="kl.jfif"   height="800px"  alt="Logo"> 
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="navLinks">
+     
+        </ul>
+    </nav>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
+    <form id="eventForm">
+        <h2>تخصصات طبيه</h2>
+        <label for="featureSelect">Choose a feature:</label>
+        <select id="featureSelect" required>
+            <option value="">--Please choose an option--</option>
+            <option value="live-music.html">اخصاءي علاج بالفن</option>
+            <option value="food-stalls.html">اخصاءي تنميه مهارات </option>
+            <option value="workshops.html">اخصاءي  حركي</option>
+            <option value="networking.html">اخصاءي عقلي</option>
+            <option value="keynote-speakers.html">اخصاءي  تخاطب</option> 
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('eventForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const selectedFeature = document.getElementById('featureSelect').value;
+
+            // Redirect to the selected feature page
+            if (selectedFeature) {
+                window.location.href = selectedFeature;
+            }
+        });
+    </script>
+</body>
+</html>
